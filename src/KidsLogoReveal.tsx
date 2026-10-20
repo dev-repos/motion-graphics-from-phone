@@ -146,7 +146,7 @@ export const KidsLogoReveal: React.FC = () => {
 
   // Shot 4: letters land one by one, then the URL settles underneath.
   const letter = (i: number) =>
-    spr(T.letters + i * 0.06, { damping: 12, stiffness: 170, mass: 0.7 });
+    spr(T.letters + i * 0.08, { damping: 18, stiffness: 90, mass: 0.9 });
   const url = interpolate(frame, [at(T.url), at(T.url + 0.6)], [0, 1], {
     ...clamp,
     easing: easeOutExpo,
@@ -318,7 +318,7 @@ export const KidsLogoReveal: React.FC = () => {
                     strokeWidth={18}
                     paintOrder="stroke"
                     strokeLinejoin="round"
-                    opacity={interpolate(p, [0, 0.12], [0, 1], clamp)}
+                    opacity={interpolate(p, [0, 0.3], [0, 1], clamp)}
                     transform={`translate(0 ${interpolate(p, [0, 1], [-70, 0])}) translate(${cx} 205) scale(${interpolate(p, [0, 1], [0.8, 1])}) translate(${-cx} -205)`}
                   >
                     {l.text}
